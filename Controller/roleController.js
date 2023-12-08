@@ -50,7 +50,7 @@ const regcreate=async(req,res)=>{
                     from: 'no-reply@sattik.com',
                     to: user.email,
                     subject: 'Account Verification',
-                    text: 'Hello ' + req.body.name + ',\n\n' + 'Please verify your account by clicking the link:'+`https://logregapi-fcmq.onrender.com/api/confirmation/${user.email}/${token.token}` 
+                    text: 'Hello ' + req.body.name + ',\n\n' + 'Please verify your account by clicking the link:'+`https://logregapi.onrender.com/api/confirmation/${user.email}/${token.token}` 
                 }
                 transPorter.sendMail(mailOptions);
                 return res.status(200).json({
